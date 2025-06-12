@@ -1,0 +1,26 @@
+name: 'Send Environment Info to Enov8'
+description: 'Send version, system, and environment to Enov8'
+
+inputs:
+  version:
+    description: 'Version (e.g. 10.0.6)'
+    required: true
+  system:
+    description: 'System name (e.g. Partner Portal)'
+    required: true
+  environment:
+    description: 'Environment name (e.g. SIT2)'
+    required: true
+  app_id:
+    description: 'Enov8 app-id and user-id (same value)'
+    required: true
+  app_key:
+    description: 'Enov8 app-key'
+    required: true
+  enov8_base_url:
+    description: 'Base URL (e.g. https://dashboard.enov8.com/ecosystem)'
+    required: true
+
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
