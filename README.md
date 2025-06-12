@@ -58,8 +58,6 @@ To authenticate with Enov8's REST API, you must generate an API Key from the Eno
 4. Enter your **Application ID**  
 5. Click **“Generate Random Key”** to create your API Key
 
-💡 **Note:** Use your **Application ID** for both `user-id` and `app-id` headers in API requests.
-
 🔐 **Security Tip:**  
 Store the App ID and Key securely in your GitHub repository’s **Actions secrets**.
 
