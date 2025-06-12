@@ -48,7 +48,7 @@ Add these to your repository’s **Secrets and variables > Actions** section:
 ## 🛠 Example Workflow
 
 ```yaml
-name: Send Enov8 Update
+name: Send-Enov8-Version
 
 on:
   workflow_dispatch:
