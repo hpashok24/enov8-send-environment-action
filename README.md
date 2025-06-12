@@ -45,6 +45,30 @@ Add these to your repository’s **Secrets and variables > Actions** section:
 
 ---
 
+## 🔑 How to Get Your Enov8 App ID & App Key
+
+To authenticate with Enov8's API, you need an App ID and App Key.
+
+### 📘 Steps to Generate:
+
+1. **Log in** to your Enov8 dashboard (e.g., `https://<your org domain>.enov8.com`)
+2. Navigate to:  
+   **Admin → API Clients**  
+   or go directly to [API Client Settings](https://<your org domain>.enov8.com/ecosystem/api-clients)
+3. Click **"New API Client"** to register a new key
+4. Once created, note the following:
+   - ✅ **App ID** → use this for both `user-id` and `app-id`
+   - 🔐 **App Key** → use this for `app-key`
+
+🔒 **Security Tip:**  
+Store both values in **GitHub Actions secrets** — never commit them in code.
+
+📚 **Reference:**  
+See the official Enov8 documentation for more details:  
+👉 [Generating an API Key — Enov8 REST API Guide](https://docs.enov8.com/docs/enov8-platform/rest-api#generating-an-api-key)
+
+---
+
 ## 🛠 Example Workflow
 
 ```yaml
