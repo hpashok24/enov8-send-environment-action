@@ -10,9 +10,9 @@ jobs:
       - name: Send to Enov8
         uses: hpashok24/enov8-send-environment-action@v1
         with:
-          version: "10.0.6"
-          system: "Partner Portal"
-          environment: "SIT2"
+          version: "17.20"
+          system: "GDW"
+          environment: "DEV Env"
           app_id: ${{ secrets.ENOV8_APP_ID }}
           app_key: ${{ secrets.ENOV8_APP_KEY }}
           enov8_base_url: ${{ secrets.ENOV8_BASE_URL }}
