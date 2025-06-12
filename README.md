@@ -25,11 +25,11 @@ It handles authentication headers (`user-id`, `app-id`, `app-key`) and builds th
 | Name             | Required | Description                                                               |
 |------------------|----------|---------------------------------------------------------------------------|
 | `version`        | ✅       | The version you want to send (e.g., `10.0.6`)                             |
-| `system`         | ✅       | The system name (e.g., `Partner Portal`)                                  |
-| `environment`    | ✅       | The environment name (e.g., `SIT2`)                                       |
+| `system`         | ✅       | The system name (e.g., `GDW`)                                  |
+| `environment`    | ✅       | The environment name (e.g., `SIT`)                                       |
 | `app_id`         | ✅       | Enov8 App ID (used as both `app-id` and `user-id`)                         |
 | `app_key`        | ✅       | Enov8 App Key                                                              |
-| `enov8_base_url` | ✅       | Base URL of the Enov8 instance (e.g., `https://dashboard.enov8.com/ecosystem`) |
+| `enov8_base_url` | ✅       | Base URL of the Enov8 instance (e.g., `https://<your org domain>.enov8.com/ecosystem`) |
 
 ---
 
@@ -41,7 +41,7 @@ Add these to your repository’s **Secrets and variables > Actions** section:
 |--------------------|--------------------------------------------|
 | `ENOV8_APP_ID`     | `demoapi`                                  |
 | `ENOV8_APP_KEY`    | `your-app-key-here`                        |
-| `ENOV8_BASE_URL`   | `https://dashboard.enov8.com/ecosystem`    |
+| `ENOV8_BASE_URL`   | `https://<your org domain>.enov8.com/ecosystem`    |
 
 ---
 
@@ -61,8 +61,8 @@ jobs:
         uses: hpashok24/enov8-send-environment-action@v1
         with:
           version: "10.0.6"
-          system: "Partner Portal"
-          environment: "SIT2"
+          system: "GDW"
+          environment: "SIT"
           app_id: ${{ secrets.ENOV8_APP_ID }}
           app_key: ${{ secrets.ENOV8_APP_KEY }}
           enov8_base_url: ${{ secrets.ENOV8_BASE_URL }}
