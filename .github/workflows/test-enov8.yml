@@ -10,7 +10,7 @@ jobs:
       - name: Send to Enov8
         uses: hpashok24/enov8-send-environment-action@v1
         with:
-          version: "17.20"
+          version: "17.21"
           system: "GDW"
           environment: "DEV Env"
           app_id: ${{ secrets.ENOV8_APP_ID }}
