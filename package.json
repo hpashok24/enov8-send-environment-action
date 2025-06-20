@@ -1,0 +1,15 @@
+{
+  "name": "enov8-send-environment-info-action",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "@actions/core": "^1.10.0",
+    "axios": "^1.6.0"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.38.0"
+  },
+  "scripts": {
+    "build": "ncc build index.js -o dist"
+  }
+}
