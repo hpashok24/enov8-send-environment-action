@@ -13,7 +13,7 @@ jobs:
       ENOV8_BASE_URL: ${{ secrets.ENOV8_BASE_URL }}
     steps:
       - name: Send to Enov8
-        uses: hpashok24/send-environment-info-action@v1.2  # ✅ Use your Action repo & tag
+        uses: hpashok24/enov8-send-environment-info-action@v1.2  # ✅ Use your Action repo & tag
         with:
           version: "17.2898989"           # ✅ Safe input
           system: "GDW"              # ✅ Safe input
