@@ -1,0 +1,23 @@
+name: Test Enov8 Send Environment Info
+
+on:
+  workflow_dispatch:
+
+jobs:
+  enov8-test:
+    runs-on: ubuntu-latest
+    environment: production  # ✅ Use your Environment name where secrets are stored
+    env:
+      ENOV8_APP_ID: ${{ secrets.ENOV8_APP_ID }}
+      ENOV8_APP_KEY: ${{ secrets.ENOV8_APP_KEY }}
+      ENOV8_BASE_URL: ${{ secrets.ENOV8_BASE_URL }}
+    steps:
+      - name: Checkout Code (optional if needed)
+        uses: actions/checkout@v4
+
+      - name: Send to Enov8
+        uses: hpashok24/enov8-send-environment-action@v1  # ✅ Use your Action repo & tag
+        with:
+          version: "17.24"           # ✅ Safe input
+          system: "GDW"              # ✅ Safe input
+          environment: "DEV Env"     # ✅ Safe input
