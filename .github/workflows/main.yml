@@ -16,7 +16,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Send to Enov8
-        uses: hpashok24/enov8-send-environment-action@v1  # ✅ Use your Action repo & tag
+        uses: hpashok24/enov8-send-environment-info-secure@v1.1  # ✅ Use your Action repo & tag
         with:
           version: "17.24"           # ✅ Safe input
           system: "GDW"              # ✅ Safe input
